@@ -11,12 +11,15 @@ public class Robo {
 
     public void setOrigem(Position position) throws Exception {
         if(!caminho.estaVazia()){
-            throw new Exception("Já está em movimento");
+            throw new Exception("Robo já está em movimento, não pode alterar o inicio.");
         }
         caminho.empilhar(position);
     }
 
-    public void setDestino(Position position) {
+    public void setDestino(Position position) throws Exception {
+        if(!caminho.estaVazia()){
+            throw new Exception("Destino deve ser indicado antes de iniciar o movimento.");
+        }
         destino = position;
     }
 
