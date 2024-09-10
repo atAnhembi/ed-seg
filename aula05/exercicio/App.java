@@ -6,15 +6,14 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         int x, y;
-        
+
         Robo robo = new Robo(10);
-        robo.setOrigem(new Position(0, 0));
 
         System.out.println("Informe a coordenada x, y DESTINO:");
         x = scanner.nextInt();
         y = scanner.nextInt();
 
-        robo.setDestino(new Position(x, y));
+        robo.setTrajeto(new Position(0, 0),new Position(x, y) );
 
         boolean movendo = true;
         while (movendo) {

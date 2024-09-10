@@ -4,23 +4,16 @@ public class Robo {
     private Pilha<Position> caminho;
     private Position destino;
 
-
     public Robo(int caminhoMaximo) {
         caminho = new Pilha<>(caminhoMaximo);
     }
 
-    public void setOrigem(Position position) throws Exception {
-        if(!caminho.estaVazia()){
-            throw new Exception("Robo já está em movimento, não pode alterar o inicio.");
-        }
-        caminho.empilhar(position);
-    }
-
-    public void setDestino(Position position) throws Exception {
+    public void setTrajeto(Position origem, Position destino) throws Exception {
         if(!caminho.estaVazia()){
             throw new Exception("Destino deve ser indicado antes de iniciar o movimento.");
         }
-        destino = position;
+        this.destino = destino;
+        caminho.empilhar(origem);
     }
 
     public boolean mover(Position position) throws Exception{
