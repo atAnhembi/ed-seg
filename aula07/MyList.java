@@ -80,7 +80,16 @@ public class MyList<T> {
 
     // retorna o valor que está em uma certa posição, sem remover
     public T get(int position) {
-        return null;
+        if(position <= 0 || position > size){
+            return null;
+        }
+        int count = 1;
+        Node<T> aux = first;
+        while (count < position) {
+            aux = aux.getNext();
+            count++;
+        }
+        return aux.getData();
     }
 
     // Verifica se um dado está presente na lista
