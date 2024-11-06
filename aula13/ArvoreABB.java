@@ -28,9 +28,9 @@ public class ArvoreABB {
                     previous.setLeft(newNode);
                 }
             } else {
-                aux = aux.getRigth();
+                aux = aux.getRight();
                 if(aux == null) {
-                    previous.setRigth(newNode);
+                    previous.setRight(newNode);
                 }
             }
         }
@@ -48,7 +48,7 @@ public class ArvoreABB {
         
         out += inOrder(no.getLeft());
         out += no.getData() + " ";
-        out += inOrder(no.getRigth());
+        out += inOrder(no.getRight());
         
         return out;
     }
@@ -66,7 +66,7 @@ public class ArvoreABB {
         
         out += no.getData() + " ";
         out += preOrder(no.getLeft());
-        out += preOrder(no.getRigth());
+        out += preOrder(no.getRight());
         
         return out;
     }
@@ -81,7 +81,7 @@ public class ArvoreABB {
         String out = "";
         
         out += posOrder(no.getLeft());
-        out += posOrder(no.getRigth());
+        out += posOrder(no.getRight());
         out += no.getData() + " ";
         
         return out;
@@ -102,7 +102,7 @@ public class ArvoreABB {
             if(aux.getData() > key) {
                 aux = aux.getLeft();
             } else {
-                aux = aux.getRigth();
+                aux = aux.getRight();
             }
         }
         return false;

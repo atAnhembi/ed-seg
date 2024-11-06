@@ -1,7 +1,7 @@
 
 public class Node {
     private int data;
-    private Node left, rigth;
+    private Node left, right;
     
     public Node(int data) {
         this.data = data;
@@ -19,11 +19,11 @@ public class Node {
         this.left = left;
     }
 
-    public Node getRigth() {
-        return rigth;
+    public Node getRight() {
+        return right;
     }
 
-    public void setRigth(Node rigth) {
-        this.rigth = rigth;
+    public void setRight(Node right) {
+        this.right = right;
     }
 }
